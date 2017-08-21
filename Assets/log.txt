@@ -1,0 +1,49 @@
+﻿
+score multi time add????
+client no score???
+
+
+1frame = 100ms
+delay by 2 frames //frame 4 do frame 2
+each pack contains 3 frames info
+
+type fixedFloat
+fixedFloat i = 1.01
+ToInt
+
+
+random
+seed
+
+client divide display and logic layer
+
+
+1. 禁用Time类相关属性及函数，如Time.deltaTime等。而使用帧时间（第N帧 X 固定频率）use Network.time
+
+2. 禁用Invoke()等函数
+
+3. 避免在Awake()、Start()、Update()、LateUpdate()、OnDestroy()等函数中实现影响游戏逻辑判断的代码
+
+4. 避免使用Unity3D自带物理引擎
+
+5. 避免使用协程Coroutine
+
+凡有浮点数参与的逻辑计算需要特殊处理
+
+网络逻辑帧的缓冲区
+
+自行解决丢包问题
+how to trait too old pack?
+display immidiately?
+
+UDP建议不超过Internet标准MTU尺寸576byte。
+
+use decimal
+
+attention Dictionary, Raycast
+
+pings between mobile devices (or between the mobile device and the desktop) are about 40–60 ms
+
+帧同步lockstep
+example
+http://clintonbrennan.com/2013/12/lockstep-implementation-in-unity3d/
